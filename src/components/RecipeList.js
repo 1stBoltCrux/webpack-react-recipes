@@ -1,24 +1,20 @@
 import React from 'react'
 
-const RecipeList = () => {
+const RecipeList = (props) => {
   return(
     <div>
       <h2>Recipes</h2>
       <ul>
-        <li>
-          <span>Creepy Halloween Skull Cupcakes</span>
-          <span>Dessert</span>
-        </li>
-        <li>
-          <span>A Bunch of Fudge in a Bucket</span>
-          <span>Dessert</span>
-        </li>
-        <li>
-          <span>A Stick Jammed into A Ham</span>
-          <span>Lunch</span>
-        </li>
+        {props.recipes.map(recipe => (
+
+          <li key={recipe.id} onClick={() => props.onClick(recipe.id)}>
+            <span>{recipe.name}</span>
+            <span>{recipe.category}</span>
+          </li>
+
+        ))}
       </ul>
-        </div>
+    </div>
   )
 }
 
