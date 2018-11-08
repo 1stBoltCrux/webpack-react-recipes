@@ -4,7 +4,7 @@ const RecipeDetail = (props) => {
   console.log(props);
   if (props.recipe){
     return(
-      <div>
+      <div className="pl4">
         <h2>{props.recipe.name}</h2>
         <img src={props.recipe.image}/>
         <div>

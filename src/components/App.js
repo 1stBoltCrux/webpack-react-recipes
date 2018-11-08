@@ -36,16 +36,20 @@ class App extends React.Component {
     return(
       <div>
         <Header/>
-        <main style={{
-          display: 'flex',
-        }}>
-          <RecipeList
-            onClick={this.onRecipeClick}
-            recipes={recipes}/>
-          <RecipeDetail
+        <main className="flex px4">
+          <div className="px4">
+            <RecipeList
 
-            recipe={currentRecipe}/>
-      </main>
+              onClick={this.onRecipeClick}
+              recipes={recipes}/>
+          </div>
+
+          <RecipeDetail
+            className="pl4"
+
+            recipe={currentRecipe}
+          />
+        </main>
       </div>
     )
   }
