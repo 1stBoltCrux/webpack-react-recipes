@@ -4,10 +4,10 @@ const RecipeList = (props) => {
   return(
     <div>
       <h2>Recipes</h2>
-      <ul>
+      <ul className="list-reset">
         {props.recipes.map(recipe => (
 
-          <li key={recipe.id} onClick={() => props.onClick(recipe.id)}>
+          <li className="py2 border-bottom border-bottom-dashed" key={recipe.id} onClick={() => props.onClick(recipe.id)}>
             <span>{recipe.name}</span>
             <span>{recipe.category}</span>
           </li>

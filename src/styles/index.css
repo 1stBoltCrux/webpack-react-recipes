@@ -1,6 +1,8 @@
 @import "basscss";
 @import "basscss-colors";
 @import "basscss-background-colors";
+@import "./border.css";
+@import "./fonts.css";
 
 :root {
   --h1: 70px;

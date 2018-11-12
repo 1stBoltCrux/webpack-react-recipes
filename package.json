@@ -27,6 +27,7 @@
     "basscss": "^8.0.10",
     "basscss-background-colors": "^2.1.0",
     "basscss-colors": "^2.2.0",
+    "classnames": "^2.2.6",
     "html-webpack-plugin": "^3.2.0",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",

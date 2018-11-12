@@ -45,7 +45,7 @@ class App extends React.Component {
           </div>
 
           <RecipeDetail
-            className="pl4"
+            className="ml4"
 
             recipe={currentRecipe}
           />
