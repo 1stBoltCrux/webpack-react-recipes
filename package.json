@@ -5,12 +5,18 @@
   "license": "MIT",
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server",
-    "build": "./node_modules/.bin/webpack"
+    "build": "./node_modules/.bin/webpack",
+    "lint": "./node_modules/.bin/eslint ./src"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "css-loader": "^1.0.1",
     "dotenv": "^6.1.0",
+    "eslint": "^5.9.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
     "postcss": "^7.0.5",
     "postcss-cssnext": "^3.1.0",
@@ -20,6 +26,7 @@
     "webpack-cli": "^3.1.2"
   },
   "dependencies": {
+    "babel-eslint": "^10.0.1",
     "babel-loader": "7",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
@@ -29,6 +36,7 @@
     "basscss-colors": "^2.2.0",
     "classnames": "^2.2.6",
     "html-webpack-plugin": "^3.2.0",
+    "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "webpack": "3.6.0",

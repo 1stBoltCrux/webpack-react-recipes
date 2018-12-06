@@ -1,29 +1,45 @@
-import React from 'react'
+import React from 'react';
 import classNames from 'classnames';
+import PropTypes from 'prop-types';
 
 const RecipeDetail = (props) => {
-  console.log(props);
-  if (props.recipe){
-    return(
+  const { recipe, style, className } = props;
+  if (recipe) {
+    return (
       <div className="pl4 p2 bg-white">
-        <h2>{props.recipe.name}</h2>
-        <img className="fit" src={props.recipe.image}/>
+        <h2>{recipe.name}</h2>
+        <img
+          className="fit"
+          src={recipe.image}
+          alt={recipe.name}
+        />
         <div>
-          <span>{props.recipe.category}</span>
-          <span>{props.recipe.calories}</span>
+          <span>{recipe.category}</span>
+          <span>{recipe.calories}</span>
         </div>
         <h3>Ingredients</h3>
-        {props.recipe.ingredients.map(ingredient => (
+        {recipe.ingredients.map(ingredient => (
           <li key={ingredient}>
             {ingredient}
           </li>
         ))}
       </div>
-    )
-  } else {
-    return <p style={props.style}
-      className={classNames(`h3 p2 bg-white italic center ${props.className}`)}>Please select a recipe to view detail</p>
+    );
   }
-}
+  return (
+    <p
+      style={style}
+      className={classNames(`h3 p2 bg-white italic center ${className}`)}
+    >
+Please select a recipe to view detail
+    </p>
+  );
+};
 
-export default RecipeDetail
+export default RecipeDetail;
+
+RecipeDetail.propTypes = {
+  style: PropTypes.object,
+  recipe: PropTypes.object,
+  className: PropTypes.string,
+};
