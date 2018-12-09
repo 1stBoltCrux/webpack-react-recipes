@@ -6,15 +6,19 @@
   "scripts": {
     "start": "node_modules/.bin/webpack-dev-server",
     "build": "./node_modules/.bin/webpack",
-    "lint": "./node_modules/.bin/eslint ./src"
+    "lint": "./node_modules/.bin/eslint ./src",
+    "test": "./node_modules/.bin/jest"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "css-loader": "^1.0.1",
     "dotenv": "^6.1.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^22.1.2",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "file-loader": "^2.0.0",
@@ -23,6 +27,7 @@
     "postcss-import": "^12.0.1",
     "postcss-loader": "^3.0.0",
     "prettier": "^1.15.3",
+    "react-test-renderer": "^16.6.3",
     "style-loader": "^0.23.1",
     "webpack-cli": "^3.1.2"
   },
@@ -37,6 +42,7 @@
     "basscss-colors": "^2.2.0",
     "classnames": "^2.2.6",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
     "prop-types": "^15.6.2",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",

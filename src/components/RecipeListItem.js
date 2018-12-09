@@ -29,4 +29,8 @@ RecipeListItem.propTypes = {
   onFavorited: PropTypes.func
 }
 
+RecipeListItem.defaultProps = {
+  recipe: {},
+}
+
 export default RecipeListItem;

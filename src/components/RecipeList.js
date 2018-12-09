@@ -29,4 +29,9 @@ RecipeList.propTypes = {
   onClick: PropTypes.func,
 };
 
+RecipeList.defaultProps = {
+  recipes: [],
+  favorites: []
+}
+
 export default RecipeList;
