@@ -1,6 +1,7 @@
 import React from 'react';
 import classNames from 'classnames';
 import PropTypes from 'prop-types';
+import {Link} from 'react-router-dom'
 
 const RecipeDetail = (props) => {
   const { recipe, style, className } = props;
@@ -23,6 +24,9 @@ const RecipeDetail = (props) => {
             {ingredient}
           </li>
         ))}
+        <h3>Steps</h3>
+        <ol>{props.recipe.steps.map(step => <li key={step}>{step}</li>)}</ol>
+        <Link to={`/recipe/${props.recipe.id}`}>See More</Link>
       </div>
     );
   }
